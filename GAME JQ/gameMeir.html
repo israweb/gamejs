@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html lang = "en">
+<head>
+  <link rel="stylesheet" href="CSS/gameMeir.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body onload = "start_local()">
+<header>
+  <div id="newLevel"></div>
+  <div id="gameOver"></div>
+  
+  <div id="start" class = "bb">
+    <h1 >Please, push here to start game</h1>
+  </div>
+  <div id="continue" class = "bb">
+    <h1 >Please, push here to continue game</h1>
+  </div>
+  <div id="stop" class = "bb">
+    <h1 >Please, push here to stop game</h1>
+  </div>
+  <div id="new_level" class = "bb">
+    <h1 >Congratulations! You have risen to level <span id="lev">1</span>. Press here to start.</h1>
+  </div>
+  <div id="newgame" class = "bb">
+    <h1 >Please, push here to restart game.</h1>
+  </div>
+  <div id="wingame" class = "bb">
+    <h1 >Congratulations! You are the absolute winner!</h1>
+  </div>
+</header>
+<section>
+      <div id="field" class = "ff">
+         <div id="target"></div>
+      </div>
+
+      <div id="newRecord" class = "ff">
+          <form >
+            <label for="fname"><h1>You took place in the list of the best players.
+              Please enter your name:</h1></label>
+            <input type="text" id="name" placeholder="Your name..">  
+            <input id ="sub" type="submit" value="Submit">
+          </form>
+      </div>
+
+      <!-- <div id="newLevel" class = "ff">Congratulations! You have risen to level <span id="lev">1</span>!</div> -->
+      <div id="winner" class = "ff">Congratulations! You are the absolute winner!</div>
+      <div id="timeOver" class = "ff">
+        <p>Sorry, your time is over!</p>
+        <p>You hit the target <span id='times'>0</span> times.</p>
+        <p>And get <span id='poi'>0</span> points.</p>
+      </div>
+      <div id="lef">
+          <div id="l1">
+              <div id="l1in">
+                <h2 id=>TIME</h2>
+                <h2 id="timeD"></h2>
+              </div>
+          </div>
+          <div id="l2">
+              <div id="l1in">
+                <h2>POINTS</h2>
+                <h2 id = "pointsD"></h2>
+              </div>
+          </div>
+          <div id="l3">
+              <div id="l1in">
+                <h2>TO NEW LEVEL</h2>
+                <h2 id="toleD"></h2>
+              </div>
+          </div>
+          <div id="l4">
+              <div id="l1in">
+                <h2>RECORD LIST</h2>
+                <h2 id = "recordList"></h2>
+              </div>
+          </div>
+</section>
+<!-- <div class="popup" onclick="popUp('myPopup')">Click me to toggle the popup!
+  <span class="popuptext" id="myPopup">A Simple Popup!</span>
+</div> -->
+
+<div class="hover_bkgr_fricc0" id = "bigPOP">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton" id ="endBigPOP">X</div>
+        <p>Sorry, your time is over!</p>
+        <p>You hit the target <span id='times1'>0</span> times.</p>
+        <p>And get <span id='poi1'>0</span> points.</p>
+    </div>
+</div>
+<footer>
+    <div id= "clRec">Clear record List</div>
+    <div id = "exaRec">Example record List</div>
+</footer>
+
+
+
+
+</div>
+
+
+        <script src="JS/gameMeir.js"></script>
+
+</body>
+

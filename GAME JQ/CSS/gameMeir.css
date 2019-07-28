@@ -1,0 +1,304 @@
+
+  *{
+    font-family: Areal;
+    border-radius: 5px;
+}
+
+body { 
+    margin: 40px
+}
+#start, #stop, #continue, #new_level, #newgame, #wingame {
+    width: 1600px;
+    height: 80px;
+    padding: 20px 0;
+    background-color: #4CAF50;
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 1vw;
+    color: white;
+    }
+
+#stop {
+    display: none;
+    background-color: grey;
+    color: wheat
+        
+    }
+header {
+    margin: none;
+    border: none;
+    padding: none;
+}
+section {
+    width: 1600px;
+    height: 80px;
+    display: inline-flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: space-between;
+
+    height: 500px;
+    width: 1600px;
+}
+#field {
+    flex-grow: 1;
+    /* width: 1300px; */
+    height: 500px;
+    background-color: rgb(49, 48, 48);
+    color: white;
+    text-align: center;
+    line-height: 500px;
+    
+}
+
+#lef {
+    
+    height: 500px;
+    background-color: rgb(49, 48, 48);
+    margin: 0 0 0 10px;
+    flex-grow: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: space-between;
+}
+#l1, #l2, #l3, #l4 {
+    background-color:#4CAF50;
+    flex-grow: 1;
+    margin: 10px 10px 0 10px;
+}
+
+#l4 {
+    margin: 10px;
+} 
+
+h2 {
+    margin: 5px;
+
+}
+#target {
+    background-color: red;
+    width: 15vw;
+    height: 10vw;
+    position: relative;
+    /* top: 660px;
+    left:1320px; */
+    top: 0px;
+    left:0px;
+}
+
+#target {
+    animation: none;
+    
+}
+
+@-webkit-keyframes t_rot {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(359deg);}
+}
+
+
+input[type=text], select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 2vw;
+  }
+  
+  input[type=submit] {
+    width: 60%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 2vw;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  #newRecord, #newLevel, #winner, #timeOver{
+    display: none;
+    height: 100%;
+    flex-grow: 1;
+    border-radius: 5px;
+    
+    
+  }
+  
+  .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  .ff {
+      font-size: 3vw;
+      background-color: rgb(49, 48, 48);
+      color: #fff;
+      text-align: center;
+  }
+
+  #newRecord {
+      font-size: 2vw;
+      white-space: pre-line;
+  }
+  #newRecord h1 {
+      margin: 0;
+  }
+
+  #lef h2 {
+    text-align: center;
+  }
+
+
+  /* Popup box BEGIN */
+  .hover_bkgr_fricc0 {
+    display: none;
+    visibility: hidden;
+
+  }
+
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    visibility: visible ;
+    display: block;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* Popup box BEGIN */
+
+footer {
+  width: 1600px;
+  display: flex;
+  wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  color: white;
+  font-size: 2vw;
+  text-align: center;
+}
+footer div {
+  background-color:  #4CAF50;
+  flex-grow: 1;
+ ;
+}
+
+footer div:nth-child(1) {
+  margin: 5px 5px 5px 0;
+  border: 2px solid rgb(49, 48, 48);
+}
+
+footer div:nth-child(2) {
+  margin: 5px 0px 5px 5px;
+  border: 2px solid rgb(49, 48, 48);
+}
